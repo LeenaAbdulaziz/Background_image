@@ -28,11 +28,10 @@ override fun onClick(v: View?) {
     val bb="Night"
     val bg=ed.text.toString().lowercase()
     when (bg) {
-        background.lowercase() -> { val b1 = Background()
+        background.lowercase() -> {
                 Background().changeBackground(relative_layout,Background.day)}
         bb.lowercase() -> {
-            val b1 = Background()
-            b1.changeBackground(relative_layout,Background.night)}
+             Background().changeBackground(relative_layout,Background.night)}
         else -> {
             Toast.makeText(applicationContext," somthing wrong", Toast.LENGTH_SHORT).show()
         }
