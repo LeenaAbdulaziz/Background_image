@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 override fun onClick(v: View?) {
     val background="Day"
     val bb="Night"
-    val bg=ed.text.toString()
+    val bg=ed.text.toString().lowercase()
     when (bg) {
-        background -> { val b1 = Background()
-                b1.changeBackground(relative_layout,Background.day)}
-        bb -> {
+        background.lowercase() -> { val b1 = Background()
+                Background().changeBackground(relative_layout,Background.day)}
+        bb.lowercase() -> {
             val b1 = Background()
             b1.changeBackground(relative_layout,Background.night)}
         else -> {

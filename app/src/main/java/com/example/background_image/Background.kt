@@ -9,16 +9,16 @@ import kotlinx.android.synthetic.main.activity_main.*
 class Background {
 
     companion object {
-        val night = 0
-        val day = 1
+        val day = "day"
+        val night = "night"
 
     }
 
-    fun changeBackground(layout:View,day:Int){
+    fun changeBackground(layout:View,day:String){
 
         when (day){
-            0->{layout.setBackgroundResource(R.drawable.night)}
-            1->{layout.setBackgroundResource(R.drawable.day)}
+            "night"->{layout.setBackgroundResource(R.drawable.night)}
+            "day"->{layout.setBackgroundResource(R.drawable.day)}
         }
 
     }
